@@ -9,7 +9,10 @@ using NLTDotNetCore.ConsoleApp;
 // adoDotNetExample.Delete(11);
 // adoDotNetExample.Edit(12);
 
-DapperExample dapperExample = new DapperExample();
-dapperExample.Run();
+// DapperExample dapperExample = new DapperExample();
+// dapperExample.Run();
+
+EFCoreExample efCoreExample = new EFCoreExample();
+efCoreExample.Run();
 
 Console.ReadLine();
