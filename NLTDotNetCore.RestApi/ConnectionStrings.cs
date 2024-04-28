@@ -1,6 +1,6 @@
 using System.Data.SqlClient;
 
-namespace NLTDotNetCore.ConsoleApp;
+namespace NLTDotNetCore.RestApi;
 
 internal static class ConnectionStrings
 {

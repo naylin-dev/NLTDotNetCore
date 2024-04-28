@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using NLTDotNetCore.ConsoleApp;
+using NLTDotNetCore.ConsoleApp.EFCoreExamples;
 
 // AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 // adoDotNetExample.Read();

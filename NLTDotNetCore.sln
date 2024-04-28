@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleApp", "NLTDotNetCore.ConsoleApp\NLTDotNetCore.ConsoleApp.csproj", "{30C6A63A-4579-46C9-88DC-02ED6C9D66BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.RestApi", "NLTDotNetCore.RestApi\NLTDotNetCore.RestApi.csproj", "{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{30C6A63A-4579-46C9-88DC-02ED6C9D66BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C6A63A-4579-46C9-88DC-02ED6C9D66BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C6A63A-4579-46C9-88DC-02ED6C9D66BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

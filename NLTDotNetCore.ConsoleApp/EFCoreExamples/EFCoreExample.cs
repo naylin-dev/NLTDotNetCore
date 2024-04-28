@@ -1,4 +1,6 @@
-namespace NLTDotNetCore.ConsoleApp;
+using NLTDotNetCore.ConsoleApp.Dtos;
+
+namespace NLTDotNetCore.ConsoleApp.EFCoreExamples;
 
 internal class EFCoreExample
 {
