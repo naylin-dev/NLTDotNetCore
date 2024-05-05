@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.RestApi", "NLTDotNetCore.RestApi\NLTDotNetCore.RestApi.csproj", "{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.Shared", "NLTDotNetCore.Shared\NLTDotNetCore.Shared.csproj", "{1CB34707-168D-4F1C-9D45-38C9D43ACF5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FA75C3-5231-4174-9B74-6D3220EE3FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB34707-168D-4F1C-9D45-38C9D43ACF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB34707-168D-4F1C-9D45-38C9D43ACF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB34707-168D-4F1C-9D45-38C9D43ACF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB34707-168D-4F1C-9D45-38C9D43ACF5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
