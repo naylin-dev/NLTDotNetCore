@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleAppHtt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleAppRestClientExamples", "NLTDotNetCore.ConsoleAppRestClientExamples\NLTDotNetCore.ConsoleAppRestClientExamples.csproj", "{E796DFB7-B967-4CCA-A0F0-1917AD6215EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.PizzaApi", "NLTDotNetCore.PizzaApi\NLTDotNetCore.PizzaApi.csproj", "{6DD12753-EA58-41C7-A226-5C02A027ACC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,5 +47,9 @@ Global
 		{E796DFB7-B967-4CCA-A0F0-1917AD6215EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E796DFB7-B967-4CCA-A0F0-1917AD6215EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E796DFB7-B967-4CCA-A0F0-1917AD6215EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD12753-EA58-41C7-A226-5C02A027ACC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD12753-EA58-41C7-A226-5C02A027ACC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD12753-EA58-41C7-A226-5C02A027ACC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD12753-EA58-41C7-A226-5C02A027ACC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
