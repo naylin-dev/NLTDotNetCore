@@ -1,4 +1,5 @@
 using NLTDotNetCore.RestApiWithNLayer.Db;
+using NLTDotNetCore.RestApiWithNLayer.Models.Blog;
 
 namespace NLTDotNetCore.RestApiWithNLayer.Features.Blog;
 

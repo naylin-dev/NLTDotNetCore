@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NLTDotNetCore.Shared\NLTDotNetCore.Shared.csproj" />
+        <ProjectReference Include="..\NLTDotNetCore.Shared\NLTDotNetCore.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

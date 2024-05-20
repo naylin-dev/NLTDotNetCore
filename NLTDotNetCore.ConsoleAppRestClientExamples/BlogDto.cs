@@ -1,3 +1,5 @@
+namespace NLTDotNetCore.ConsoleAppRestClientExamples;
+
 public class BlogDto
 {
     public int BlogId { get; set; }

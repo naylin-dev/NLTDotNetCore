@@ -1,4 +1,4 @@
-namespace NLTDotNetCore.RestApiWithNLayer.Models;
+namespace NLTDotNetCore.RestApiWithNLayer.Models.MyanmarProverbs;
 
 public class Tbl_MMProverbsTitle
 {

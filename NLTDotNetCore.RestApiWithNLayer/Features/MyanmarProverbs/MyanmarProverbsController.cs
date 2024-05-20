@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using NLTDotNetCore.RestApiWithNLayer.Models.MyanmarProverbs;
 
 namespace NLTDotNetCore.RestApiWithNLayer.Features.MyanmarProverbs
 {

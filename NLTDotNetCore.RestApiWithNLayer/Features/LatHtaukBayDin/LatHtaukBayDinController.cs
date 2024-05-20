@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using NLTDotNetCore.RestApiWithNLayer.Models.LatHtaukBayDin;
 
 namespace NLTDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
 {
@@ -19,21 +20,21 @@ namespace NLTDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
         public async Task<IActionResult> Questions()
         {
             var model = await GetDataAsync();
-            return Ok(model.questions);
+            return Ok(model.Questions);
         }
 
         [HttpGet("number-list")]
         public async Task<IActionResult> NumberList()
         {
             var model = await GetDataAsync();
-            return Ok(model.numberList);
+            return Ok(model.NumberList);
         }
 
         [HttpGet("{questionNo}/{no}")]
         public async Task<IActionResult> Answer(int questionNo, int no)
         {
             var model = await GetDataAsync();
-            return Ok(model.answers.FirstOrDefault(x => x.questionNo == questionNo && x.answerNo == no));
+            return Ok(model.Answers.FirstOrDefault(x => x.QuestionNo == questionNo && x.AnswerNo == no));
         }
     }
 }

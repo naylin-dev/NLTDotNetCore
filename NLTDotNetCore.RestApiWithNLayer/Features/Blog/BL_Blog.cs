@@ -1,3 +1,5 @@
+using NLTDotNetCore.RestApiWithNLayer.Models.Blog;
+
 namespace NLTDotNetCore.RestApiWithNLayer.Features.Blog;
 
 public class BL_Blog

@@ -25,7 +25,7 @@
 
     <ItemGroup>
         <Folder Include="Features\LatHtaukBayDin\"/>
-        <Folder Include="Features\MyanmarProverbs\" />
+        <Folder Include="Features\MyanmarProverbs\"/>
     </ItemGroup>
 
     <ItemGroup>

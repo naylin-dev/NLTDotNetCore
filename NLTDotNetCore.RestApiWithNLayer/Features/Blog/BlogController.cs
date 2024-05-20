@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NLTDotNetCore.RestApiWithNLayer.Models.Blog;
 
 namespace NLTDotNetCore.RestApiWithNLayer.Features.Blog
 {

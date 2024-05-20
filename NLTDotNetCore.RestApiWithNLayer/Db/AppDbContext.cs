@@ -1,3 +1,5 @@
+using NLTDotNetCore.RestApiWithNLayer.Models.Blog;
+
 namespace NLTDotNetCore.RestApiWithNLayer.Db;
 
 internal class AppDbContext : DbContext

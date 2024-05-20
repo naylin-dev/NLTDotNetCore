@@ -1,4 +1,4 @@
-namespace NLTDotNetCore.RestApiWithNLayer.Models;
+namespace NLTDotNetCore.RestApiWithNLayer.Models.Blog;
 
 [Table("Tbl_Blog")]
 public class BlogModel

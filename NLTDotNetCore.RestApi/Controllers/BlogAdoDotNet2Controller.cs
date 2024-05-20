@@ -1,5 +1,3 @@
-using System.Data;
-using System.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using NLTDotNetCore.RestApi.Models;
 using NLTDotNetCore.Shared;

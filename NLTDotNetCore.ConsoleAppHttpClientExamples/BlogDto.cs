@@ -1,3 +1,5 @@
+namespace NLTDotNetCore.ConsoleAppHttpClient;
+
 public class BlogDto
 {
     public int BlogId { get; set; }

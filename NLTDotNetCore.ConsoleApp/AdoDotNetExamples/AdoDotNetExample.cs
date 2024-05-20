@@ -8,7 +8,7 @@ public class AdoDotNetExample
     private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
     {
         DataSource = ".", // server name
-        InitialCatalog = "DotNetTrainingBatch4", // database name
+        InitialCatalog = "NLTDotNetCore", // database name
         UserID = "sa", // username
         Password = "sasa@123" // password
     };
