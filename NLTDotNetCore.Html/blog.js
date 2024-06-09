@@ -80,12 +80,10 @@ function updateBlog(id, title, author, content) {
     clearControls();
 }
 
-function deleteBlog(id) {
+function deleteBlog2(id) {
     let result = confirm("Are you sure you want to delete?");
 
-    if (!result) {
-        return;
-    }
+    if (!result) return;
 
     let lst = getBlogs();
 
@@ -105,10 +103,56 @@ function deleteBlog(id) {
     getBlogsTable();
 }
 
-function uuidv4() {
-    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
-        (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
-    );
+function deleteBlog3(id) {
+    Swal.fire({
+        title: "Confirm",
+        text: "Are you sure you want to delete?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes"
+    }).then((result) => {
+        if (!result.isConfirmed) return;
+
+        let lst = getBlogs();
+
+        const items = lst.filter(blog => blog.id === id);
+
+        if (items.length === 0) {
+            errorMessage("Blog not found");
+            return;
+        }
+
+        lst = lst.filter(blog => blog.id !== id);
+
+        const jsonBlog = JSON.stringify(lst);
+
+        localStorage.setItem(tblBlog, jsonBlog);
+        successMessage("Deleting Successful.");
+        getBlogsTable();
+    });
+}
+
+function deleteBlog(id) {
+    confirmMessage("Are you sure you want to delete?").then(
+        function (value) {
+            let lst = getBlogs();
+
+            const items = lst.filter(blog => blog.id === id);
+
+            if (items.length === 0) {
+                errorMessage("Blog not found");
+                return;
+            }
+
+            lst = lst.filter(blog => blog.id !== id);
+
+            const jsonBlog = JSON.stringify(lst);
+
+            localStorage.setItem(tblBlog, jsonBlog);
+            successMessage("Deleting Successful.");
+            getBlogsTable();
+        }
+    )
 }
 
 function getBlogs() {
@@ -119,14 +163,6 @@ function getBlogs() {
         lst = JSON.parse(blogs);
     }
     return lst;
-}
-
-function successMessage(message) {
-    alert(message);
-}
-
-function errorMessage(message) {
-    alert(message);
 }
 
 function clearControls() {
