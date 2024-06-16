@@ -1,14 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using NLTDotNetCore.ConsoleApp.Dtos;
-using NLTDotNetCore.ConsoleApp.Services;
 
 namespace NLTDotNetCore.ConsoleApp.EFCoreExamples;
 
-internal class AppDbContext : DbContext
+public class AppDbContext : DbContext
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     optionsBuilder.UseSqlServer(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+    // }
+
+    public AppDbContext(DbContextOptions options) : base(options)
     {
-        optionsBuilder.UseSqlServer(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
     }
 
     public DbSet<BlogDto> Blogs { get; set; }

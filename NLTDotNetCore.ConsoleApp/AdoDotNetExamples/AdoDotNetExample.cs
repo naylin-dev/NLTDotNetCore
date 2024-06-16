@@ -5,13 +5,20 @@ namespace NLTDotNetCore.ConsoleApp.AdoDotNetExamples;
 
 public class AdoDotNetExample
 {
-    private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+    // private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+    // {
+    //     DataSource = ".", // server name
+    //     InitialCatalog = "NLTDotNetCore", // database name
+    //     UserID = "sa", // username
+    //     Password = "sasa@123" // password
+    // };
+
+    private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+    public AdoDotNetExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
     {
-        DataSource = ".", // server name
-        InitialCatalog = "NLTDotNetCore", // database name
-        UserID = "sa", // username
-        Password = "sasa@123" // password
-    };
+        _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+    }
 
     public void Read()
     {

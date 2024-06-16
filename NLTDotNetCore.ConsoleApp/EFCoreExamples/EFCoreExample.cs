@@ -2,18 +2,23 @@ using NLTDotNetCore.ConsoleApp.Dtos;
 
 namespace NLTDotNetCore.ConsoleApp.EFCoreExamples;
 
-internal class EFCoreExample
+public class EFCoreExample
 {
-    private readonly AppDbContext _db = new AppDbContext();
+    private readonly AppDbContext _db;
+
+    public EFCoreExample(AppDbContext db)
+    {
+        _db = db;
+    }
 
     public void Run()
     {
-        // Read();
+        Read();
         // Edit(1);
         // Edit(11);
         // Create("new title", "new author", "new content");
         // Update(1003, "update title", "update author", "update content");
-        Delete(1003);
+        // Delete(1003);
     }
 
     private void Read()
