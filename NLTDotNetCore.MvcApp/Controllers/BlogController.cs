@@ -17,7 +17,10 @@ public class BlogController : Controller
     // GET
     public async Task<IActionResult> Index()
     {
+        // select * from Tbl_Blog with (nolock)
+
         var lst = await _db.Blogs
+            .AsNoTracking()
             .OrderByDescending(x => x.BlogId)
             .ToListAsync();
         return View(lst);
@@ -56,7 +59,9 @@ public class BlogController : Controller
     [ActionName("Update")]
     public async Task<IActionResult> BlogEdit(int id, BlogModel blog)
     {
-        var item = await _db.Blogs.FirstOrDefaultAsync(x => x.BlogId == id);
+        var item = await _db.Blogs
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.BlogId == id);
 
         if (item is null)
         {
@@ -66,6 +71,9 @@ public class BlogController : Controller
         item.BlogTitle = blog.BlogTitle;
         item.BlogAuthor = blog.BlogAuthor;
         item.BlogContent = blog.BlogContent;
+
+        _db.Entry(item).State = EntityState.Modified;
+
         await _db.SaveChangesAsync();
         return Redirect("/Blog");
     }
