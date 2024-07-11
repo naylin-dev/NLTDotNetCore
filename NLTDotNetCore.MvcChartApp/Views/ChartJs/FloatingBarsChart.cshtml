@@ -1,0 +1,54 @@
+@using Newtonsoft.Json
+@model FloatingBarsChartModel
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+@section scripts
+{
+    <script>
+        const _labels = @Html.Raw(JsonConvert.SerializeObject(@Model.Labels));
+        const _data1 = @Html.Raw(JsonConvert.SerializeObject(@Model.Data1));
+        const _data2 = @Html.Raw(JsonConvert.SerializeObject(@Model.Data2));
+
+        const data = {
+            labels: _labels,
+            datasets: [
+                {
+                    label: 'Dataset 1',
+                    data: _data1,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                },
+                {
+                    label: 'Dataset 2',
+                    data: _data2,
+                    backgroundColor: 'rgb(54, 162, 235)',
+                },
+            ]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Floating Bar Chart'
+                    }
+                }
+            }
+        };
+
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, config);
+
+
+    </script>
+}
