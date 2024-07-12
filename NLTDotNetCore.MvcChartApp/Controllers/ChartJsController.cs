@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using NLTDotNetCore.MvcChartApp.Models;
+using NLTDotNetCore.MvcChartApp.Models.ChartJs;
 
 namespace NLTDotNetCore.MvcChartApp.Controllers;
 

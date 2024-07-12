@@ -1,4 +1,4 @@
-namespace NLTDotNetCore.MvcChartApp.Models;
+namespace NLTDotNetCore.MvcChartApp.Models.ChartJs;
 
 public class FloatingBarsChartModel
 {
