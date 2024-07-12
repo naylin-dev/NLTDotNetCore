@@ -7,7 +7,7 @@ namespace NLTDotNetCore.MvcChartApp.Controllers;
 public class HighChartsController : Controller
 {
     // GET
-    public async Task<IActionResult> TimeSeriesLineChart()
+    public IActionResult TimeSeriesLineChart()
     {
         TimeSeriesLineChartModel model = new TimeSeriesLineChartModel()
         {
@@ -34,6 +34,138 @@ public class HighChartsController : Controller
                 new double[] { 1264550400000, 0.7107 }
             },
         };
+        return View(model);
+    }
+
+    public IActionResult BubbleChart()
+    {
+        BubbleChartModel model = new BubbleChartModel()
+        {
+            Data = new List<BubbleChartDataModel>()
+            {
+                new BubbleChartDataModel()
+                {
+                    x = 95,
+                    y = 95,
+                    z = 13.8,
+                    name = "BE",
+                    country = "Belgium"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 86.5,
+                    y = 102.9,
+                    z = 14.7,
+                    name = "DE",
+                    country = "Germany"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 80.8,
+                    y = 91.5,
+                    z = 15.8,
+                    name = "FI",
+                    country = "Finland"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 80.4,
+                    y = 102.5,
+                    z = 12,
+                    name = "NL",
+                    country = "Netherlands"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 80.3,
+                    y = 86.1,
+                    z = 11.8,
+                    name = "SE",
+                    country = "Sweden"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 78.4,
+                    y = 70.1,
+                    z = 16.6,
+                    name = "ES",
+                    country = "Spain"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 74.2,
+                    y = 68.5,
+                    z = 14.5,
+                    name = "FR",
+                    country = "France"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 73.5,
+                    y = 83.1,
+                    z = 10,
+                    name = "NO",
+                    country = "Norway"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 71,
+                    y = 93.2,
+                    z = 24.7,
+                    name = "UK",
+                    country = "United Kingdom"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 69.2,
+                    y = 57.6,
+                    z = 10.4,
+                    name = "IT",
+                    country = "Italy"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 68.6,
+                    y = 20,
+                    z = 16,
+                    name = "RU",
+                    country = "Russia"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 65.5,
+                    y = 126.4,
+                    z = 35.3,
+                    name = "US",
+                    country = "United States"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 65.4,
+                    y = 50.8,
+                    z = 28.5,
+                    name = "HU",
+                    country = "Hungary"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 63.4,
+                    y = 51.8,
+                    z = 15.4,
+                    name = "PT",
+                    country = "Portugal"
+                },
+                new BubbleChartDataModel()
+                {
+                    x = 64,
+                    y = 82.9,
+                    z = 31.3,
+                    name = "NZ",
+                    country = "New Zealand"
+                }
+            }
+        };
+
         return View(model);
     }
 }
