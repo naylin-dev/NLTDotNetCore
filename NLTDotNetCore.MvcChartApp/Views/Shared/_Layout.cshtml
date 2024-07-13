@@ -42,6 +42,16 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CanvasJS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="CanvasJs" asp-action="CandlestickCharts">Candlestick Chart</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -70,6 +80,8 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 @await RenderSectionAsync("scripts", required: false)
 </body>
