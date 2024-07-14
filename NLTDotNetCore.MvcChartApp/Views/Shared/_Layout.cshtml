@@ -26,8 +26,15 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="ChartJs" asp-action="FloatingBarsChart">ChartJs</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ChartJs
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="ChartJs" asp-action="FloatingBarsChart">Floating Bars Chart</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,6 +56,9 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="CanvasJs" asp-action="CandlestickCharts">Candlestick Chart</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="CanvasJs" asp-action="MultiSeriesBarChart">Multi Series Bar Chart</a>
                             </li>
                         </ul>
                     </li>

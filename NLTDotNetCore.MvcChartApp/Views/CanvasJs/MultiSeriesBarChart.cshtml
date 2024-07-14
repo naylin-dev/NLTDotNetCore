@@ -1,0 +1,81 @@
+@using Newtonsoft.Json
+@model MultiSeriesBarChartModel
+
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+@section scripts{
+    <script>
+        const _goldMedalData = @Html.Raw(JsonConvert.SerializeObject(Model.GoldMedal));
+        const _silverMedalData = @Html.Raw(JsonConvert.SerializeObject(Model.SilverMedal));
+        const _bronzeMedalData = @Html.Raw(JsonConvert.SerializeObject(Model.BronzeMedal));
+
+        const chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Olympic Medals of all Times (till 2016 Olympics)"
+            },
+            axisY: {
+                title: "Medals",
+                includeZero: true
+            },
+            legend: {
+                cursor: "pointer",
+                itemclick: toggleDataSeries
+            },
+            toolTip: {
+                shared: true,
+                content: toolTipFormatter
+            },
+            data: [
+                {
+                    type: "bar",
+                    showInLegend: true,
+                    name: "Gold",
+                    color: "gold",
+                    dataPoints: _goldMedalData
+                },
+                {
+                    type: "bar",
+                    showInLegend: true,
+                    name: "Silver",
+                    color: "silver",
+                    dataPoints: _silverMedalData
+                },
+                {
+                    type: "bar",
+                    showInLegend: true,
+                    name: "Bronze",
+                    color: "#A57164",
+                    dataPoints: _bronzeMedalData
+                }
+            ]
+        });
+        chart.render();
+
+        function toolTipFormatter(e) {
+            let str = "";
+            let total = 0;
+            let str3;
+            let str2;
+            for (let i = 0; i < e.entries.length; i++){
+                const str1 = "<span style= \"color:" + e.entries[i].dataSeries.color + "\">" + e.entries[i].dataSeries.name + "</span>: <strong>" + e.entries[i].dataPoint.y + "</strong> <br/>";
+                total = e.entries[i].dataPoint.y + total;
+                str = str.concat(str1);
+            }
+            str2 = "<strong>" + e.entries[0].dataPoint.label + "</strong> <br/>";
+            str3 = "<span style = \"color:Tomato\">Total: </span><strong>" + total + "</strong><br/>";
+            return (str2.concat(str)).concat(str3);
+        }
+
+        function toggleDataSeries(e) {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else {
+                e.dataSeries.visible = true;
+            }
+            chart.render();
+        }
+
+    </script>
+}

@@ -296,4 +296,43 @@ public class CanvasJsController : Controller
         };
         return View(model);
     }
+
+    public IActionResult MultiSeriesBarChart()
+    {
+        MultiSeriesBarChartModel model = new MultiSeriesBarChartModel()
+        {
+            GoldMedal = new List<MultiSeriesBarChartGoldMedalModel>()
+            {
+                new() { Country = "Italy", Gold = 243 },
+                new() { Country = "China", Gold = 236 },
+                new() { Country = "France", Gold = 243 },
+                new() { Country = "Great Britain", Gold = 273 },
+                new() { Country = "Germany", Gold = 269 },
+                new() { Country = "Russia", Gold = 196 },
+                new() { Country = "USA", Gold = 1118 }
+            },
+            SilverMedal = new List<MultiSeriesBarChartSilverMedalModel>()
+            {
+                new() { Country = "Italy", Silver = 212 },
+                new() { Country = "China", Silver = 186 },
+                new() { Country = "France", Silver = 272 },
+                new() { Country = "Great Britain", Silver = 299 },
+                new() { Country = "Germany", Silver = 270 },
+                new() { Country = "Russia", Silver = 165 },
+                new() { Country = "USA", Silver = 896 }
+            },
+            BronzeMedal = new List<MultiSeriesBarChartBronzeMedalModel>()
+            {
+                new() { Country = "Italy", Bronze = 236 },
+                new() { Country = "China", Bronze = 172 },
+                new() { Country = "France", Bronze = 309 },
+                new() { Country = "Great Britain", Bronze = 302 },
+                new() { Country = "Germany", Bronze = 285 },
+                new() { Country = "Russia", Bronze = 188 },
+                new() { Country = "USA", Bronze = 788 }
+            }
+        };
+
+        return View(model);
+    }
 }
