@@ -5,9 +5,17 @@ namespace NLTDotNetCore.MvcChartApp.Controllers;
 
 public class CanvasJsController : Controller
 {
+    private readonly ILogger<CanvasJsController> _logger;
+
+    public CanvasJsController(ILogger<CanvasJsController> logger)
+    {
+        _logger = logger;
+    }
+
     // GET
     public IActionResult CandlestickCharts()
     {
+        _logger.LogInformation("CandlestickCharts action called");
         CandlestickChartModel model = new CandlestickChartModel()
         {
             Data = new List<CandlestickChartDataModel>()
