@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.RealtimeChatA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.RealtimeChartApp", "NLTDotNetCore.RealtimeChartApp\NLTDotNetCore.RealtimeChartApp.csproj", "{D6C3E480-F316-487B-88EB-47F06C056C9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleAppEFCore", "NLTDotNetCore.ConsoleAppEFCore\NLTDotNetCore.ConsoleAppEFCore.csproj", "{B35377F6-7C85-44AB-B0BB-507BCD8D4D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLTDotNetCore.ConsoleAppEFCore.Databases", "NLTDotNetCore.ConsoleAppEFCore.Databases\NLTDotNetCore.ConsoleAppEFCore.Databases.csproj", "{C9ACF93B-6F34-418A-A5B4-294D4AA75F0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,5 +127,13 @@ Global
 		{D6C3E480-F316-487B-88EB-47F06C056C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6C3E480-F316-487B-88EB-47F06C056C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6C3E480-F316-487B-88EB-47F06C056C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35377F6-7C85-44AB-B0BB-507BCD8D4D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35377F6-7C85-44AB-B0BB-507BCD8D4D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35377F6-7C85-44AB-B0BB-507BCD8D4D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35377F6-7C85-44AB-B0BB-507BCD8D4D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9ACF93B-6F34-418A-A5B4-294D4AA75F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9ACF93B-6F34-418A-A5B4-294D4AA75F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9ACF93B-6F34-418A-A5B4-294D4AA75F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9ACF93B-6F34-418A-A5B4-294D4AA75F0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
